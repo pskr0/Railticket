@@ -1,0 +1,76 @@
+<!DOCTYPE HTML> <HTML> <HEAD> <link rel="shortcut icon" href="https://scontent.fhyd7-1.fna.fbcdn.net/v/t1.0-9/12376203_1706223229615172_6829260611200277990_n.jpg?_nc_cat=110&_nc_sid=85a577&_nc_ohc=vbYACOV1cyMAX9wEbsd&_nc_ht=scontent.fhyd7-1.fna&oh=89f7130038a11da6ff07ab1f40a72a2c&oe=5E9470F8"/> 
+<meta charset="UTF-8"> <TITLE> RAILGURU </TITLE> <style>
+#ddd{
+    display: block;
+    font: 1rem 'Fira Sans', sans-serif;
+}
+#ddd{
+    margin: .4rem 0;
+}
+</style> 
+
+
+
+</HEAD> 
+<body ALIGN="CENTER" style="color:brown; height:100%;background-repeat:no-repeat;background-size:cover;> 
+<H1 STYLE="color:orange";> <large style ="background-color:red,size:20px">RAILGURU PROTOTYPE WEB MODEL</large> 
+</H1> <BR> <BR> <BR> 
+<form action="/predict">
+<!--<label for="cars" STYLE="COLOR:darkblue">Select Source</label>  -->
+<H5 STYLE="COLOR:darkblue">
+Enter Source
+<input placeholder="Source"name="sourcename" type="text" value="" id="first_name" type="text" >
+</h5>                                                                                                                   
+<br>
+
+<h5 style="color:darkblue">
+Enter Destination
+<input placeholder="Destination" name="destinationname" type="text" value="" id="last_name" type="text" >
+</h5>
+<!-- <select name="sourcename" id="cars"> 
+	<option value="none" selected="selected"> -- Choose Source --</option>
+	<option value="Secunderabad">Secunderabad</option>
+	<option value="Kachiguda">Kachiguda</option>
+</select> 
+ <br>
+<label for="cars0" STYLE="COLOR:darkblue">Select Destination</label> 
+<select name="destinationname" id="cars0">
+	<option value="none" selected="selected"> -- Choose Destination --</option>
+	<option value="Delhi">Delhi</option>
+	<option value="Punjab">Punjab</option>
+</select>-->
+
+
+
+ <br>
+ <h5 style="color:darkblue"> Enter Date 
+<input placeholder="Date" name="inputdata" type="text" value="20190701" min="20190631" max="20200801" id="dd"> 
+"YYYYMMDD" </h5> <br> 
+          <button type="submit" class="btn-large waves-effect waves-light orange" >Book Your Journey</button> 
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+<h2>{{source0}}</h2>           <h2>{{destination0}}</h2>
+<h3>{{dat0}}</h3>
+<h3>{{prediction_text}}</h3>
+<h3>{{dat1}}</h3> 
+<h3>{{pred}}</h3>
+<h3>{{dat2}}</h3>  
+<h3>{{pred1}}</h3>
+<h3>{{dat3}}</h3> 
+<h3>{{pred2}}</h3> 
+<h3>{{dat4}}</h3> 
+<h3>{{pred3}}</h3>  
+<button type="button" onclick=" document.getElementById('demo').innerHTML= Date()"> 
+Click Time </button> <p id="demo"></p> </body>
+</html>

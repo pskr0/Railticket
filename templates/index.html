@@ -6,7 +6,12 @@
 <TITLE>
 RAILGURU
 </TITLE>
-
+<style>
+table, th, td {
+  border: 1px solid white;
+  border-collapse: collapse;
+}
+</style>
 
 
 
@@ -21,24 +26,63 @@ RAILGURU
 <BR>
 <BR>
 <form action="/predict" method="post">
-
+<!--
 
 
 <H5 STYLE="COLOR:darkblue">
 Enter Source
-<input placeholder="Source"name="source" type="text" value="" id="first_name" type="text" >
+<input placeholder="Source"name="sourcename" type="text" value="" id="first_name" type="text" >
 </h5>
 
 <br>
 
 <h5 style="color:darkblue">
 Enter Destination
-<input placeholder="Destination" name="destination" type="text" value="" id="last_name" type="text" >
+<input placeholder="Destination" name="destinationname" type="text" value="" id="last_name" type="text" >
 </h5>
+-->
+
+<H5 STYLE="COLOR:darkblue">
+<label for="cars" STYLE="COLOR:darkblue">Select Source</label>
+<select name="sourcename" id="cars" required>
+                    <option value="" selected="selected">Choose Source</option>
+                    <option value="Secunderabad">Secunderabad</option>
+                  <option value="Kachiguda">Kachiguda</option>                                                              
+ </select>       </h5>                                                                                              
+           <br>                                                                                                                   
+<H5 STYLE="COLOR:darkblue">
+<br>
+<label for="cars0" STYLE="COLOR:darkblue">Select Destination</label>
+<select name="destinationname" id="cars0" required>                                                                                      
+ <option value="" selected="selected">Choose Destination</option>
+ <option value="Delhi">Delhi</option>                                                                                    
+ <option value="Punjab">Punjab</option>
+</select></h5>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <br>
 <h5 style="color:darkblue">
 Enter Date
-<input placeholder="Date" name="inputdata">
+<input placeholder="Date" name="inputdata" required>
 "YYYYMMDD"
 </h5>
 
@@ -50,17 +94,90 @@ Enter Date
           <button type="submit" class="btn-large waves-effect waves-light orange">Book Your Journey</button>
 </form>
 </span>
-<h1>{{prediction_text}}</h1>
+<!--<h1>{{prediction_text}}</h1>
 <h1> {{pred}}</h1>
 <h1> {{pred1}}</h1>
 <h1> {{pred2}}</h1>
-<h1> {{pred3}}</h1>
+<h1> {{pred3}}</h1>-->
+<table style="width:100%">
+<tr>
+<th>
+<h4>{{source0}}</h4> </th>
+<th><h4>{{destination0}}</h4></th></tr></table>
+
+
+<table style="width:100%">
+<tr>
+<th>{{Date0}}</th>
+<th>{{head2}}</th>
+</tr>
+<tr>
+ <td>  
+  {{dat0}}</td><td>
+{{prediction_text}}</td></tr>
+<tr>
+ <td>{{dat1}}</td> 
+ <td>{{pred}}</td></tr>
+<tr>
+ <td>{{dat2}}</td>
+ <td>{{pred1}}</td></tr>
+<tr>
+ <td>{{dat3}}</td>
+ <td>{{pred2}}</td></tr>
+<tr>
+ <td>{{dat4}}</td>
+ <td>{{pred3}}</td>
+</tr>
+</table>
+
+
+
+
+
+
 </h4> 
 
 </a>
 <button type="button" onclick="document.getElementById('demo').innerHTML= Date()">
 Click Time </button>
 <p id="demo"></p>
+
+
+
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCrcTed5ENBQFLD9vmQz6iXr8HBVSajZWQ",
+    authDomain: "railguru-b36c1.firebaseapp.com",
+    databaseURL: "https://railguru-b36c1.firebaseio.com",
+    projectId: "railguru-b36c1",
+    storageBucket: "railguru-b36c1.appspot.com",
+    messagingSenderId: "743682731369",
+    appId: "1:743682731369:web:9014f590edacce1142e1f8",
+    measurementId: "G-MJM1SVL9GS"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
+
+
+
+
+
+
+
+
+
 
 
 
