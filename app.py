@@ -22,7 +22,9 @@ def loginacc():
 @app.route('/filedata',methods=['POST','GET'])
 def filedata():
     return render_template('files.html')
-
+@app.route('/cvr.ac.in',methods=['POST','GET'])
+def cvrweb():
+    return render_template('http://cvr.ac.in/home4/')
 
 
 
