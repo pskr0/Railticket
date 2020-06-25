@@ -19,7 +19,9 @@ def recheck():
 def loginacc():
     return render_template('login.html')
 
-
+@app.route('/filedata',methods=['POST','GET'])
+def filedata():
+    return render_template('files.html')
 
 
 
