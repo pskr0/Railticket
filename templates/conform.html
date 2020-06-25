@@ -1,0 +1,63 @@
+<html>
+<head>
+<title>JOURNEY CONFORMATION</title>
+
+</head>
+
+<body>
+<h3> JOURNEY  DETAILS</h3>
+<table style="width:100%">    <tr> <th>FROM    <h4>{{source0}}</h4> </th>          
+ <th>TO<h4>{{destination0}}</h4></th></tr></table>           <table style="width:100%">
+            <tr>           <th>{{Date0}}</th>    
+                                                                                                                                                      
+<th>{{head2}}</th>                                                                                                                                 
+</tr>                                                                                          
+<tr>                                                                                                                                                                        
+<td>                                                                          
+{{dat0}}</td><td>                                                                                                                                                         
+{{prediction_text}}</td></tr>                                                                            
+<tr>                                                                                                                                                                     
+<td>{{dat1}}</td>
+ <td>{{pred}}</td></tr>
+<tr>
+ <td>{{dat2}}</td>
+ <td>{{pred1}}</td></tr>
+<tr>
+ <td>{{dat3}}</td>
+ <td>{{pred2}}</td></tr>
+<tr>
+ <td>{{dat4}}</td>
+ <td>{{pred3}}</td>
+</tr>
+</table>
+<h3>
+DATE OF JOURNEY IS{{dat0}}
+PERCENTAGE OF PROBABILITY CONFORMATION OF TICKET IS{{prediction_text}}
+TRAIN NAME : RAJDHANI EXP
+TRAIN NUMBER : 12437
+TRAIN  TYPE : RAJDHANI
+</h3>
+<form action="/recheck" method="post">
+ <button type="submit" class="btn-large waves-effect waves-light orange">MODIFY JOURNEY DATE</button>
+</form>
+<form action="/loginacc" method="post"> 
+<button type="submit">LOGIN</button>
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>

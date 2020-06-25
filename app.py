@@ -9,6 +9,21 @@ model = pickle.load(open('model.pkl', 'rb'))
 def home():
     return render_template('index.html')
 
+
+@app.route('/recheck',methods=['POST','GET'])
+def recheck():
+    return render_template('index.html')
+
+
+@app.route('/loginacc',methods=['POST','GET'])
+def loginacc():
+    return render_template('login.html')
+
+
+
+
+
+
 @app.route('/predict',methods=['POST','GET'])
 def predicts():
     #projectpath = request.form['inputdata']
@@ -46,7 +61,8 @@ def predicts():
 
     #output = round(prediction[0], 3)
     #output1=output
-    return render_template('index.html',Date0="DATE [YYYY/MM/DD]",head2="PROBABILITY OF COMFORMATION",prediction_text='{} %'.format(output),pred='{} %'.format(output1),source0='{} =========>>>>'.format(source00),destination0="==========>>>> {}".format(destination00),dat0="{} ".format(projectpath),dat1="{} ".format(projectpath1),dat2="{} ".format(projectpath2),dat3=" {}".format(projectpath3),dat4="{} ".format(projectpath4),pred1='{} %'.format(output2),pred2='{} %'.format(output3),pred3='{} %'.format(output4))
+    return render_template('conform.html',Date0="DATE [YYYY/MM/DD]",head2="PROBABILITY OF COMFORMATION",prediction_text='{} %'.format(output),pred='{} %'.format(output1),source0='{} =========>>>>'.format(source00),destination0="==========>>>> {}".format(destination00),dat0="{} ".format(projectpath),dat1="{} ".format(projectpath1),dat2="{} ".format(projectpath2),dat3=" {}".format(projectpath3),dat4="{} ".format(projectpath4),pred1='{} %'.format(output2),pred2='{} %'.format(output3),pred3='{} %'.format(output4))
+    #return render_template('index.html',Date0="DATE [YYYY/MM/DD]","head2="PROBABILITY OF COMFORMATION",prediction_text='{} %'.format(output),pred='{} %'.format(output1),source0='{} =========>>>>'.format(source00),destination0="==========>>>> {}".format(destination00),dat0="{} ".format(projectpath),dat1="{} ".format(projectpath1),dat2="{} ".format(projectpath2),dat3=" {}".format(projectpath3),dat4="{} ".format(projectpath4),pred1='{} %'.format(output2),pred2='{} %'.format(output3),pred3='{} %'.format(output4))
 
 
 
