@@ -23,14 +23,15 @@ table, th, td {
 
 </HEAD>
 
-<BODY ALIGN="CENTER" style="background-color: orange;color:brown; height:100%;background-repeat:no-repeat;background-size:cover;>
+<BODY  style="background-image: url('image7.jpg');color:brown; height:100%;background-repeat:no-repeat;background-size:100% 140%;>
 <H1 STYLE="background-color: orange;color:orange";>
-<a style="text-decoration:none" href="/filedata"><h1><u>RAILGURU PROTOTYPE WEB MODEL</u></h1></a>
+<a ALIGN="right"style="text-decoration:none" href="/filedata"><h1><u>RAILGURU PROTOTYPE WEB MODEL</u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1></a>
 </form>
 </H1>
 <BR>
 <BR>
 <BR>
+<div align= "center">
 <form action="/predict" method="post">
 <!--
 
@@ -48,49 +49,28 @@ Enter Destination
 </h5>
 -->
 
-<H5 STYLE="COLOR:darkblue">
+<H3 STYLE="COLOR:darkblue">
 <label for="cars" STYLE="COLOR:darkblue">Select Source</label>
 <select name="sourcename" id="cars" required>
                     <option value="" selected="selected">Choose Source</option>
                     <option value="Secunderabad JN">SC Secunderabad</option>
                   <option value="Kazipet JN">KZJ Kazipet</option>                                                              
- </select>       </h5>                                                                                              
-           <br>                                                                                                                   
-<H5 STYLE="COLOR:darkblue">
+ </select>       </h3>                                                                                                                                                                                                                 
+<H3 STYLE="COLOR:darkblue">
 <br>
 <label for="cars0" STYLE="COLOR:darkblue">Select Destination</label>
 <select name="destinationname" id="cars0" required>                                                                                      
  <option value="" selected="selected">Choose Destination</option>
  <option value="Hazrat Nizamuddin JN">NZM Hazrat Nizamuddin</option>                                                                                    
  <option value="Bhopal JN">BPL Bhopal</option>
-</select></h5>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</select></h3>
 
 <br>
-<h5 style="color:darkblue">
+<h3 style="color:darkblue">
 Enter Date
 <input placeholder="Date" name="inputdata" required>
 "YYYYMMDD"
-</h5>
+</h3>
 <small>"Please Enter <mark>5 days </mark>before the month ending days"</small>
 <br>
 
@@ -99,7 +79,7 @@ Enter Date
 
           <button type="submit" class="btn-large waves-effect waves-light orange">Book Your Journey</button>
 </form>
-</span>
+
 <!--<h1>{{prediction_text}}</h1>
 <h1> {{pred}}</h1>
 <h1> {{pred1}}</h1>
@@ -145,11 +125,10 @@ Enter Date
 
 
 
-<button  type="button" onclick="document.getElementById('demo').innerHTML= Date()">
+<button type="button" onclick="document.getElementById('demo').innerHTML= Date()">
 Click Time </button>
-<p id="demo"></p>
 
-
+</div>
 
 </body>
 </html>
