@@ -24,8 +24,8 @@ def filedata():
     return render_template('files.html')
 @app.route('/cvr.ac.in',methods=['POST','GET'])
 def cvrweb():
-    return render_template('http://cvr.ac.in/home4/')
-
+   # return render_template('http://cvr.ac.in/home4/')
+   return redirect(url_for('http://cvr.ac.in/home4/'))
 
 
 @app.route('/predict',methods=['POST','GET'])
