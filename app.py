@@ -27,6 +27,11 @@ def cvrweb():
    # return render_template('http://cvr.ac.in/home4/')
    return redirect(url_for('http://cvr.ac.in/home4/'))
 
+@app.route('/code_login')
+def codelogin():
+    return render_template('code_login.html')
+
+
 
 @app.route('/predict',methods=['POST','GET'])
 def predicts():
