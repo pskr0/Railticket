@@ -44,9 +44,9 @@ def predicts():
     
     source00 = request.form['sourcename']
     destination00=request.form['destinationname']
-    projectpath111 = request.form['inputdata']
-    projectpath=projectpath111.replace("-",'')
-    
+   # projectpath111 = request.form['inputdata']
+   # projectpath=projectpath111.replace("-",'')
+    projectpath = request.form['inputdata']
     
     a=int(str(projectpath))
     aa=a+1
