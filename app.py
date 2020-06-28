@@ -1,4 +1,5 @@
 import numpy as np
+import datetime
 from flask import Flask, request, jsonify, render_template
 import pickle
 
@@ -39,10 +40,14 @@ def predicts():
     #int_features = [str(x) for x in request.form.values()]
     #projectpath = request.form('miniresult')
     #final_features = [np.array(int_features)]
+    
+    
     source00 = request.form['sourcename']
     destination00=request.form['destinationname']
-    projectpath = request.form['inputdata']
-
+    projectpath111 = request.form['inputdata']
+    projectpath=projectpath111.replace("-",'')
+    
+    
     a=int(str(projectpath))
     aa=a+1
     aaa=a+2
