@@ -34,11 +34,6 @@ df=pd.read_csv('/var/www/psk/html/machine-learning-deployment/MINI_22_6_20/data_
 
 df
 #THE END DATA OF DATA SET IS DISPLAYED
-
-#df.drop(105,axis=0,inplace=True)
-#Above command to remove a row from the data set
-#105 indicates the index number or row number in the DATA SET
-
 df.tail()
 
 #df.drop(106,axis=0,inplace=True)
@@ -70,16 +65,9 @@ results=model.fit()
 
 #@#$$@#  pickle file
 
-#results.save("model.pkl")
-#loaded = ARIMAResults.load('model.pkl')
-
-
-
 #start value is starting value to predict
 #END Value is Ending value to predict.
 df['forecast']=results.predict(start=90,end=106,dynamic=True)
-#figsize is size of below graph window.
-#@df[['Waiting List Conformed','forecast']].plot(figsize=(20,8))
 
 from pandas.tseries.offsets import DateOffset
 #days can be replaced with years,months,days etc.
